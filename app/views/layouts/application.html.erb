@@ -10,8 +10,14 @@
 
 <div id="user_nav">
   <% if current_user %>
+    <p>
     Logged in as <%= current_user.email %>
     <%= link_to "Log out", log_out_path %>
+    </p>
+    <p>
+    <%= link_to "Posts", posts_path %>
+    </p>
+
   <% else %>
     <%= link_to "Sign up", sign_up_path %> or
     <%= link_to "log in", log_in_path %>
